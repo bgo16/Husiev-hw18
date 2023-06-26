@@ -23,13 +23,17 @@ class Student {
   present() {
     if (this.attendance.includes(undefined)) {
       this.attendance[this.attendance.indexOf(undefined)] = true;
-    } else console.log('More then 25');
+    } else {
+      console.log('More then 25');
+    }
   }
 
   absent() {
     if (this.attendance.includes(undefined)) {
       this.attendance[this.attendance.indexOf(undefined)] = false;
-    } else console.log('More then 25');
+    } else {
+      console.log('More then 25');
+    }
   }
 
   summary() {
@@ -40,7 +44,9 @@ class Student {
       return 'Молодець!';
     } else if (mid > 90 || midAtt > 0.9) {
       return 'Добре, але можна краще';
-    } else return 'Редиска!';
+    } else {
+      return 'Редиска!';
+    }
   }
 
   fill(a, b) {
@@ -52,20 +58,3 @@ class Student {
     }
   }
 }
-
-const student = new Student('Hoh', 'Kok', 2002);
-student.fill(50, 10);
-console.log(student.getAge());
-console.log(student.getMid());
-student.present();
-console.log(student.summary());
-
-console.log('===');
-
-const student2 = new Student('Hoh', 'Kok', 2003);
-student.fill(0, 2);
-console.log(student.getAge());
-console.log(student.getMid());
-student.present();
-student.present();
-console.log(student.summary());
